@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Base layout of the application.
+ Material Design
+ LinearLayout is used as the basic layout-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.chathumina.swat.Home">
+
+    <!-- Divider to devide content-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/blueShded"/>
+
+    <!-- Child layout is frame layout-->
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:id="@+id/ll">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Spinner bar-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/colorPrimary">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="270dp"
+                        android:background="@color/darkBlue"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_horizontal"
+                            android:layout_gravity="center_horizontal">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:text="Total Usage"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:gravity="center_vertical"/>
+
+                            <!-- Spinner Container-->
+                            <Spinner
+                                android:id="@+id/spinner"
+                                android:layout_width="200dp"
+                                android:layout_height="match_parent"
+                                android:textAlignment="center">
+
+                            </Spinner>
+
+                        </LinearLayout>
+
+                        <!-- Line Graph -->
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/linechart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/blueShded"/>
+
+                    <!-- CardView Holder-->
+                    <LinearLayout
+                        android:clipToPadding="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <android.support.v7.widget.CardView
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            app:cardCornerRadius="5dp"
+                            android:id="@+id/appliancesCard"
+                            android:layout_width="160dp"
+                            android:layout_height="190dp"
+                            android:layout_margin="10dp"
+                            app:cardBackgroundColor="@color/crdColor">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center">
+                                <!-- Image view to hold the icon-->
+                                <ImageView
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:background="@drawable/circlebackgroundpurple"
+                                    android:src="@drawable/ic_devices_other_black_24dp"
+                                    android:padding="10dp" />
+                                <!-- Textview to hold the name-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Appliances"
+                                    android:textColor="@color/white"/>
+                                <!-- Divider-->
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/lightgray"
+                                    android:layout_margin="10dp"/>
+                                <!-- Description-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Manage your connected appliances"
+                                    android:padding="5dp"
+                                    android:textColor="@android:color/darker_gray"/>
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/optimizeCard"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:layout_width="160dp"
+                            app:cardCornerRadius="5dp"
+                            android:layout_height="190dp"
+                            android:layout_margin="10dp"
+                            app:cardBackgroundColor="@color/crdColor">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center">
+                                <!-- Image view to hold the icon-->
+                                <ImageView
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:background="@drawable/circlebackgroundpink"
+                                    android:src="@drawable/ic_trending_up_black_24dp"
+                                    android:padding="10dp"/>
+                                <!-- Textview to hold the name-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Optimize"
+                                    android:textColor="@color/white"/>
+                                <!-- Divider-->
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/lightgray"
+                                    android:layout_margin="10dp"/>
+                                <!-- Description-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Optimize your electricity usage"
+                                    android:padding="5dp"
+                                    android:textColor="@android:color/darker_gray"/>
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:clipToPadding="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/scheduleCard"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:layout_width="160dp"
+                            app:cardCornerRadius="5dp"
+                            android:layout_height="190dp"
+                            android:layout_margin="10dp"
+                            app:cardBackgroundColor="@color/crdColor">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center">
+                                <!-- Image view to hold the icon-->
+                                <ImageView
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:background="@drawable/circlebackgroundgreen"
+                                    android:src="@drawable/ic_av_timer_black_24dp"
+                                    android:padding="10dp"/>
+                                <!-- Textview to hold the name-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Schedule"
+                                    android:textColor="@color/white"/>
+                                <!-- Divider-->
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/lightgray"
+                                    android:layout_margin="10dp"/>
+                                <!-- Description-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Schedule your appliances"
+                                    android:padding="5dp"
+                                    android:textColor="@android:color/darker_gray"/>
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/compareCard"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:layout_width="160dp"
+                            app:cardCornerRadius="5dp"
+                            android:layout_height="190dp"
+                            android:layout_margin="10dp"
+                            app:cardBackgroundColor="@color/crdColor">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+                                <!-- Image view to hold the icon-->
+                                <ImageView
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:background="@drawable/circlebackgroundyellow"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_compare_arrows_black_24dp" />
+                                <!-- Textview to hold the name-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Compare"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/white"/>
+                                <!-- Divider-->
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="10dp"
+                                    android:background="@color/lightgray" />
+                                <!-- Description-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Compare each months usage"
+                                    android:textColor="@android:color/darker_gray" />
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:clipToPadding="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/addCard"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            app:cardCornerRadius="5dp"
+                            android:layout_width="340dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="10dp"
+                            app:cardBackgroundColor="@color/crdColor">
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center">
+                                <!-- Image view to hold the icon-->
+                                <ImageView
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:background="@drawable/circlebackgroundpurple"
+                                    android:src="@drawable/ic_add_black_24dp"
+                                    android:padding="10dp"/>
+                                <!-- Textview to hold the name-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Add"
+                                    android:textColor="@color/white"/>
+                                <!-- Divider-->
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/lightgray"
+                                    android:layout_margin="10dp"/>
+                                <!-- Description-->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Add connections"
+                                    android:padding="5dp"
+                                    android:textColor="@android:color/darker_gray"/>
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- Divider-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/blueShded" />
+
+    <!-- Navigation bar-->
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/navigation"
+        app:itemTextColor="@color/white"
+        android:background="@color/darkBlue"/>
+
+</LinearLayout>

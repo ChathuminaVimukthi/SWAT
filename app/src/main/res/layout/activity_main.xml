@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This xml file contains the UI contents to be displayed when MainActivity.java executed.-->
+<!-- Layout is built upon a relative layout which will adjust according to the device screen sizes in order to give a better UX-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chathumina.swat.MainActivity">
+
+    <!-- Child layout is a linear layout oriented vertically-->
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary">
+
+        <!-- ImageView to hold the logo of the app-->
+        <ImageView
+            android:id="@+id/logox"
+            android:src="@drawable/ic_logox"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            />
+        <!-- TextView contains the Team Name-->
+        <TextView
+            android:id="@+id/xlabs"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="Team X"
+            android:textColor="@color/white"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

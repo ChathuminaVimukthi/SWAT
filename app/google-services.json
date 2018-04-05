@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "21095272743",
+    "firebase_url": "https://swat-web.firebaseio.com",
+    "project_id": "swat-web",
+    "storage_bucket": "swat-web.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21095272743:android:16210c4772efd5bc",
+        "android_client_info": {
+          "package_name": "com.example.chathumina.swat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21095272743-a0vr6ofb754gv3s9kd9h2er42j8867uo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi88-lhQMQa6ozY7va03KnSpIpPq8kOTg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
